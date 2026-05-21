@@ -68,3 +68,25 @@ pattern: 数组 / 双指针 / 滑动窗口 / 哈希表 / 栈 /
          单调栈 / 二分查找 / 回溯 / 动态规划 / 贪心 /
          BFS / DFS / 图 / 堆 / 前缀和 / 位运算 / 链表 / 树
 status: todo / attempted / solved / reviewed
+
+
+
+## Web clip ingest rule (labuladong / similar structured clips)
+When raw/html-lectures/ or raw/references/ contains a clipped .md file
+with front matter (title/source/tags: clippings):
+
+1. Identify target pattern from the title or content
+2. Extract in order:
+   a. 前置知识 section → update depends_on field
+   b. 核心思路解释 → update ## 核心思路
+   c. The reusable class/template code → update ## 代码模板
+   d. All LeetCode problems mentioned (with numbers) → update ## 题目列表
+   e. 拓展延伸 section → update ## 关联进阶 (create if not exists)
+3. Update (never recreate) the target wiki/patterns/ page
+4. For each problem mentioned, check if wiki/problems/ page exists:
+   - If not: create a stub problem page with status: todo
+   - If yes: add pattern wikilink if missing
+5. Preserve the source URL in pattern page front matter
+6. Do NOT copy full problem statements into pattern page,
+   only link via [[problems/题号-题目名]]
+7. Log processed file in log.md
