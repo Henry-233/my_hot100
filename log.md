@@ -84,3 +84,21 @@ tags: [log, meta]
 
 ### 进度更新
 - Phase 1 差分数组模式：总计 3 题
+
+---
+
+## 2026-05-21 — 前缀和数组 web clip 摄入
+
+### 来源
+- `raw/html-lectures/小而美的算法技巧：前缀和数组.md`（labuladong）
+
+### 更新的页面
+- `wiki/patterns/phase1-数组/前缀和.md` — 更新代码模板（NumArray 类封装、二维前缀和 NumMatrix 类）、题目列表、局限性说明
+
+### 新建题目页面（2 个）
+- `wiki/problems/303-区域和检索-数组不可变.md` — status: todo, 一维前缀和裸题
+- `wiki/problems/304-二维区域和检索-矩阵不可变.md` — status: todo, 二维前缀和 + 容斥原理
+
+### 进度更新
+- Phase 1 前缀和模式：总计 2 题
+- Phase 1 小计：5 题（前缀和 2 + 差分数组 3）

@@ -90,3 +90,25 @@ with front matter (title/source/tags: clippings):
 6. Do NOT copy full problem statements into pattern page,
    only link via [[problems/题号-题目名]]
 7. Log processed file in log.md
+
+## Auto git sync rule
+After EVERY operation that modifies any file in this vault:
+1. Stage all changes: git add .
+2. Commit with descriptive message: 
+   git commit -m "auto: {{operation_type}} - {{affected_files_summary}}"
+3. Push to remote: git push
+
+Operation type examples:
+- ingest: when processing a new clip
+- update: when updating existing pages  
+- create: when creating new pages
+- progress: when updating progress.md
+- restructure: when reorganizing directories
+
+Example commit messages:
+- "auto: ingest - 差分数组 pattern + 3 problem stubs"
+- "auto: update - 滑动窗口 pattern page"
+- "auto: progress - solved 1-两数之和"
+
+Never skip git sync even if only log.md was changed.
+Always run git push after commit, not just git commit.
